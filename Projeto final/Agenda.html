@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda</title>
+    <link rel="stylesheet" href="styledarkmode.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #222;
+            /*background-color: rgb(160, 59, 255);*/
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        main {
+            padding: 1em 2em;
+        }
+
+        section {
+            margin-bottom: 2em;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 1em;
+        }
+
+        h3 {
+            color: #444;
+        }
+
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        ul li {
+            margin: 0.5em 0;
+        }
+
+        strong {
+            /*color: #007bff;*/
+            color: rgb(160, 59, 255);
+        }
+
+        .normal{
+            text-decoration: none;
+            color: #8a5cf5;
+            font-weight: bold; 
+            transition: all 0.3 ease;
+        }
+
+        .normal:hover{
+            color: #5a32c5;
+            text-decoration: underline;
+        }
+
+        .home{
+            font-size: 1rem;
+            padding: 8px 20px;
+            text-decoration: none;
+            background-color: #444;
+            color: white;
+            border: 2px solid #665;
+            border-radius: 8px;
+            display: inline-block;
+        }
+        
+        .home:hover{
+            background-color: #5a32c5;
+            border-color: #5a32c5;
+            transition: all 0.3s ease; 
+        }
+
+        .theme-toggle{
+            margin-top: 12vh;
+        }
+
+        body.dark-mode h3{
+            color: white;
+        }
+
+        body.dark-mode li{
+            color: #bababa;
+        }
+        @media (max-width: 768px) {
+            .theme-toggle{
+                top: 0;
+                right: 0;
+                margin: 0;
+                color: rgba(255, 255, 0, 0.489);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Agenda do Evento</h1>
+    </header>
+    <main>
+        <section>
+            <h3>Dia 1: Abertura do Evento (14/12/2024)</h3>
+            <ul>
+                <li><strong>09:00</strong> - Abertura dos portões e recepção no <a href="local.html" class="normal">local</a></li>
+                <li><strong>10:00</strong> - Exposição de carros antigos (Modelos anos 50 e 60)</li>
+                <li><strong>12:00</strong> - Almoço e praça de alimentação</li>
+                <li><strong>14:00</strong> - Palestra: "História dos carros clássicos" com João Silva</li>
+                <li><strong>16:00</strong> - Concurso: "O carro mais bem restaurado"</li>
+                <li><strong>18:00</strong> - Encerramento do primeiro dia</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Dia 2: Dia dos Colecionadores (15/12/2024)</h3>
+            <ul>
+                <li><strong>09:00</strong> - Abertura e boas-vindas</li>
+                <li><strong>10:30</strong> - Feira de peças clássicas e acessórios</li>
+                <li><strong>13:00</strong> - Almoço temático com música ao vivo</li>
+                <li><strong>15:00</strong> - Desfile de carros clássicos</li>
+                <li><strong>17:30</strong> - Encerramento com premiação dos destaques do evento</li>
+            </ul>
+           
+        </section>
+        <div style="text-align: center;">
+         <a href="Evento de Carros.html" class="home">Home</a>
+         <a href="Sobre.html" class="home"> Sobre </a>
+         <button class="theme-toggle" onclick="toggleTheme()"> &#9728;</button>
+        </div>
+    </main>
+
+    <script>
+
+        function toggleTheme() {
+            const body = document.body
+            const toggleButton = document.querySelector ('.theme-toggle')
+
+            body.classList.toggle('dark-mode'); 
+            if (body.classList.contains('dark-mode')) {
+                toggleButton.innerHTML = '&#9790;'; //icone lua
+            } else {
+                toggleButton.innerHTML = '&#9728'; //icone sol
+            }
+        }
+    </script>
+</body>
+</html>

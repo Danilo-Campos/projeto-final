@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local</title>
+    <link rel="stylesheet" href="styledarkmode.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* Inclui bordas e padding no tamanho total */
+        }
+
+        html, body {
+            overflow-x: hidden; /* Evita scroll horizontal */
+            background-color: #f9f9f9;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        body {
+            max-width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 2.5rem;
+            color: #5a5a5a;
+            margin: 20px 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        p {
+            padding: 1% 10%;
+            text-align: justify;
+            font-size: 1.1rem;
+            color: #444;
+        }
+
+        .container {
+            max-width: 1200px; /* Limita a largura máxima */
+            margin: 0 auto; /* Centraliza o conteúdo */
+        }
+
+        section {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        img {
+            float: left;
+            margin-right: 15px;
+            border-radius: 10px;
+            width: 27rem;
+            height: auto;
+        }
+
+        .linknormal {
+            color: #8a5cf5;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .linknormal:hover {
+            color: #5a32c5;
+            text-decoration: underline;
+        }
+
+        .linkestilizado {
+            font-size: 1rem;
+            margin: 10px;
+            text-decoration: none;
+            color: white;
+            background-color: #444;
+            border: 2px solid #665;
+            border-radius: 8px;
+            padding: 6px 14px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .linkestilizado:hover {
+            background-color: #5a32c5;
+            border-color: #5a32c5;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #444;
+            color: white;
+            padding: 10px 0;
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #8a5cf5;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            color: #5a32c5;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            p {
+                padding: 5%;
+                font-size: 1rem;
+            }
+
+            img {
+                width: 100%;
+                margin: 0 auto 15px;
+                float: none;
+                display: block;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .theme-toggle{
+                top: 2px;
+                right: 2px;
+                margin: 0;
+            }
+        }
+            
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Local do Evento</h1>
+        <hr>
+        <p>
+            <img src="https://bsbrevista.com.br/wp-content/uploads/2024/07/Screenshot_20240706_153101_Maps2.jpg" alt="Imagem da Granja do Torto">
+            <h4>•Granja do Torto</h4>
+            <h6>Setor de Brasília, Brasil</h6>
+            O Parque de Exposições Agropecuárias Granja do Torto - PAGT é um importante espaço para o desenvolvimento da agropecuária do Distrito Federal e dos municípios que compõe a Região Integrada de Desenvolvimento do Distrito Federal e Entorno - RIDE. Inaugurado na década de 1970, o parque ocupa uma área de 740.000 metros quadrados, destinados para atividades de bovinocultura, equideocultura, caprinocultura, ovinocultura, apicultura, avicultura, atividades de entretenimento, capacitação, exposições e leilões.
+        </p>
+        <p>
+            <b>Localização</b><br>
+            Granja do Torto, 70297-400, Sobradinho, DF<br>
+            <b>CEP:</b> 70297-400<br>
+            <b>Logradouro:</b> PqEAT<br>
+            <b>Número:</b>s/n<br>
+            <b>Complemento:</b><br>
+            <b>Município:</b> Sobradinho<br>
+            <b>Bairro:</b> Granja do Torto<br>
+            <b>Estado:</b> DF<br>
+            <b>Regiões Administrativas:</b> Brasilia<br>
+        </p>
+        <section>
+            <a href="Evento de Carros.html" class="linkestilizado">Home</a>
+            <a href="Sobre.html" class="linkestilizado">Sobre</a>
+            <a href="Agenda.html" class="linkestilizado">Agenda</a>
+            <button class="theme-toggle" onclick="toggleTheme()"> &#9728; </button>
+        </section>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const toggleButton = document.querySelector('.theme-toggle');
+
+            body.classList.toggle('dark-mode');
+
+            if (body.classList.contains('dark-mode')) {
+                toggleButton.innerHTML = '&#9790;'; // ícone da lua
+            } else {
+                toggleButton.innerHTML = '&#9728;'; // ícone do sol
+            }
+        }
+    </script>
+    <footer>
+        Precisa de mais informações? Clique em <a href="contato.html">Contatos</a>.
+    </footer>
+</body>
+</html>

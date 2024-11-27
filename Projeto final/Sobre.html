@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós</title>
+    <link rel="stylesheet" href="styledarkmode.css">
+    <style>
+        /* Estilo básico */
+        body {
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: #333; 
+            line-height: 1.8;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 2.5rem;
+            color: #5a5a5a;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        p {
+            margin: 0;
+            padding: 1% 10%; 
+            text-align: justify;
+            font-size: 1.2rem;
+            color: #444;
+        }
+
+        section {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        img {
+            float: left;
+            margin-right: 15px;
+            border-radius: 10px; 
+            width: 27rem;
+            height: auto; 
+        }
+
+        .linknormal {
+            color: #8a5cf5;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .linknormal:hover {
+            color: #5a32c5;
+            text-decoration: underline;
+        }
+
+        .linkestilizado {
+            font-size: 1rem;
+            margin: 10px;
+            text-decoration: none;
+            color: white;
+            background-color: #444;
+            border: 2px solid #665;
+            border-radius: 8px;
+            padding: 8px 20px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .linkestilizado:hover {
+            background-color: #5a32c5;
+            border-color: #5a32c5;
+        }
+        .theme-toggle{
+            margin-right: 1em;
+        }
+
+
+        @media (max-width: 768px) {
+            p {
+                padding: 5%; 
+                font-size: 1rem;
+            }
+
+            img {
+                width: 100%; 
+                margin: 0 auto 15px;
+                float: none;
+                display: block; 
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+            .theme-toggle{
+                top: 0;
+                right: 0;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Descrição do Evento</h1>
+    <p>
+        <img src="https://casasavendaorlando.com.br/wp-content/uploads/Festival-de-carros-classicos-em-Orlando-acontece-em-novembro.jpg.webp" alt="Evento de Carros Clássicos">
+        Bem-vindo à nossa página oficial, dedicada a celebrar a paixão pelos <b>carros clássicos</b> e a tradição automotiva! Somos os organizadores de um dos maiores eventos do setor, uma exposição única que acontece a cada quatro anos e reúne entusiastas, colecionadores e amantes de veículos históricos em um só lugar.
+    </p>
+    <p>
+        Nossa missão é proporcionar uma experiência inesquecível, destacando a beleza, a história e o legado dos automóveis que marcaram gerações. Durante o evento, os visitantes têm a oportunidade de admirar uma <b>vasta coleção de carros</b> impecavelmente preservados e restaurados, desde modelos raros até ícones atemporais da indústria automotiva.
+    </p>
+    <p>
+        Mais do que uma exposição, este é um encontro cultural e social que conecta pessoas que compartilham a mesma paixão, fomentando a <b>valorização do design</b>, da <b>inovação</b> e da <b>tradição automotiva.</b>
+    </p>
+    <p>
+        Aguardamos você para viver essa experiência extraordinária e fazer parte deste marco imperdível no <a href="Agenda.html" class="linknormal">calendário de eventos</a> para os amantes de carros clássicos!
+    </p>
+    <section>
+        <a href="Evento de Carros.html" class="linkestilizado">Home</a>
+    </section>
+
+    <!-- Botão com ícone -->
+    <button class="theme-toggle" onclick="toggleTheme()">
+        &#9728; <!-- Unicode para o ícone do sol -->
+    </button>
+
+    <script>
+
+        function toggleTheme() {
+            const body = document.body;
+            const toggleButton = document.querySelector('.theme-toggle');
+
+            body.classList.toggle('dark-mode');
+
+            if (body.classList.contains('dark-mode')) {
+                toggleButton.innerHTML = '&#9790;'; // ícone da lua
+            } else {
+                toggleButton.innerHTML = '&#9728;'; // ícone do sol
+            }
+        }
+    </script>
+</body>
+</html>
+
+
